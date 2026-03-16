@@ -1,0 +1,61 @@
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+
+\usepackage[absolute,showboxes]{textpos} %  position textblocks at arbitary places
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage[normalem]{ulem}
+\usepackage{times}
+\usepackage{tcolorbox}
+\RequirePackage{tikz}
+
+% These colours are tried and tested for titles and headers. Don't other use color!
+\definecolor{mlzblue}{RGB}{27,38,75}
+\definecolor{mlzframe}{RGB}{166,158,186}
+\definecolor{mlzorange}{RGB}{247,133,33}
+\definecolor{mlztextgray}{gray}{0.5}
+\definecolor{DarkBlue}{RGB}{32,54,106} % { 0,  88, 128 } Juelich 2017
+\definecolor{LightBlue}{RGB}{ 229, 238, 242 } %               10% ??
+\definecolor{Red}{rgb}{0.9,0.0,0.1}
+\definecolor{Gray}{rgb}{.45,.45,.45}
+
+% see documentation for a0poster class for the size options here
+\let\Textsize\normalsize
+\def\Head#1{\vspace{2ex plus 5ex minus 1ex}
+  \noindent{\LARGE\color{DarkBlue}\bfseries #1}
+  \vspace{ 1.5ex plus 0.5ex minus 0.5ex}}
+\def\tsup#1{$^{\mbox{\small #1}}$}
+
+
+\setlength{\parskip}{1.6ex}
+\setlength{\partopsep}{0pt}
+\setlength{\topsep}{0pt}
+\setlength{\itemsep}{-0.5\parsep}
+\setlength{\columnsep}{3cm}
+
+
+\TPGrid[-20mm,-20mm]{100}{100} % [margins]{divisions}{..}
+\TPMargin{0cm}
+\TPboxrulesize=0pt % 1pt useful for debugging
+
+\parindent=0pt
+\parskip=0.5\baselineskip
+\def\ads{\vspace{2ex plus 1ex minus 1ex}}
+
+\def\PosterBackground{}
+
+
+% some new commands
+\newcommand{\anode}[4]{
+  \node[yshift=-#2cm,xshift=#1cm,anchor=north west] at (current page.north west) {
+    \begin{minipage}[t]{#3}
+      #4
+    \end{minipage}
+  };}
+  
+\def\n{\\[.8ex]}
+
+\def\SECTION#1{\begin{tcolorbox}[colframe=mlzframe,colback=mlzblue,boxrule=6pt,arc=3mm,width=1.5\textwidth]\bfseries\Large\color{white}#1\end{tcolorbox}}
+
+\def\SUBSECTION#1{{\LARGE\color{DarkBlue}#1}\vspace{0.5cm}}
