@@ -14,6 +14,9 @@ g.attr('edge', arrowsize="4.0")
 with g.subgraph(name='cluster_group1') as c1:
     c1.attr(label="Overleaf", fontsize=fs_big, labelloc="t", labeljust="l")
     c1.attr(label="Overleaf", fontsize=fs_big, labelloc="t", labeljust="l")
+    c1.node('D', 'Overleaf Project', shape='box', fontsize=fs, style="filled", fillcolor="lightblue")
+    c1.node('E', 'Compile', shape='box', fontsize=fs, style="filled", fillcolor="lightblue")
+    c1.node('U', 'Overleaf pdf', shape='box', fontsize=fs, style="filled", fillcolor="lightblue")
 
 # g.node("data", "Data")
 # g.node("scripts", "Scripts")
