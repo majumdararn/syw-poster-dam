@@ -10,8 +10,10 @@
 %     citecolor=blue,
 %     linkcolor=blue
 % }
-\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
-\addbibresource{bib.bib}
+% \usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+% \bibliographystyle{unsrt}
+% \bibliography{bib}
+\usepackage[numbers, sort&compress]{natbib} 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -87,7 +89,13 @@
 \SECTION{References}
 \begin{tikzpicture}
 	\anode{0}{0}{0.9\textwidth}{
-	\printbibliography[heading=none]
+    \renewcommand{\refname}{}   % remove heading
+    \vspace{-1.5em}                    % remove extra vertical space (adjust as needed)
+    \bibliographystyle{IEEEtran}
+    \bibliography{bib}
+ %    \bibliographystyle{unsrtnat}
+	% % \bibliographystyle{unsrt}  % numeric, order of appearance
+ %    \bibliography{bib}          % your .bib file (without .bib extension)
 	}
 \end{tikzpicture}
 \end{textblock}
