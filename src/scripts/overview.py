@@ -7,7 +7,7 @@ g = Digraph(format="pdf")
 fs='40'
 fs_big='40'
 g.attr(size="20, 1")   # width=8 inches, height=6 inches
-# g.attr(ratio="compress")   # compresses to fit
+g.attr(ratio="fill")   # compresses to fit
 g.attr('edge', arrowsize="2.0")
 
 # Nodes
