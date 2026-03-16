@@ -31,4 +31,7 @@ digraph {
 	}
 	A -> F [style=dotted]
 	F -> I
+	C -> J
+	G -> J
+	H -> J
 }
