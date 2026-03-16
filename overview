@@ -5,5 +5,8 @@ digraph {
 	subgraph cluster_group1 {
 		fontsize=55 label=Overleaf labeljust=l labelloc=t
 		fontsize=55 label=Overleaf labeljust=l labelloc=t
+		D [label="Overleaf Project" fillcolor=lightblue fontsize=40 shape=box style=filled]
+		E [label=Compile fillcolor=lightblue fontsize=40 shape=box style=filled]
+		U [label="Overleaf pdf" fillcolor=lightblue fontsize=40 shape=box style=filled]
 	}
 }
