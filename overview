@@ -1,0 +1,11 @@
+digraph {
+	data [label=Data]
+	scripts [label=Scripts]
+	figures [label=Figures]
+	tex [label="LaTeX manuscript"]
+	pdf [label="Article PDF"]
+	data -> scripts
+	scripts -> figures
+	figures -> tex
+	tex -> pdf
+}
