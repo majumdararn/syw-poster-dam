@@ -25,5 +25,8 @@ digraph {
 		J [label=figures fillcolor=lightblue fontsize=40 shape=box style=filled]
 	}
 	subgraph cluster_group4 {
+		fontsize=55 label="Final manuscript" labeljust=l labelloc=t
+		K [label=GitHub fillcolor=lightblue fontsize=40 shape=box style=filled]
+		L [label=Arxiv fillcolor=lightblue fontsize=40 shape=box style=filled]
 	}
 }
