@@ -27,6 +27,6 @@ with g.subgraph(name='cluster_group1') as c1:
 # g.edge("figures", "tex")
 # g.edge("tex", "pdf")
 
-# g.render("overview", view=True)
+g.render("overview", view=True)
 
 g.render(paths.figures / 'overview', format='pdf', cleanup=True)
