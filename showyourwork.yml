@@ -53,7 +53,7 @@ overleaf:
     - src/tex/figures
     - src/tex/output
     - src/tex/MLZposter.sty
-    -
+
   # List of files to pull from Overleaf
   pull:
     - src/tex/ms.tex
