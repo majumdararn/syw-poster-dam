@@ -7,7 +7,7 @@ digraph {
 		A [label=manuscript fillcolor=lightblue fontsize=40 shape=box style=filled]
 	}
 	subgraph cluster_group2 {
-		fontsize=55 label=Overleaf labeljust=l labelloc=t
+		fontsize=55 label=GitHub labeljust=l labelloc=t
 		B [label="analysis scripts" fillcolor=lightblue fontsize=40 shape=box style=filled]
 		C [label="figure scripts" fillcolor=lightblue fontsize=40 shape=box style=filled]
 		D [label=environment fillcolor=lightblue fontsize=40 shape=box style=filled]
@@ -15,12 +15,12 @@ digraph {
 		F [label=manuscript fillcolor=lightblue fontsize=40 shape=box style=filled]
 	}
 	subgraph cluster_group3 {
-		fontsize=55 label=Overleaf labeljust=l labelloc=t
+		fontsize=55 label=Zenodo labeljust=l labelloc=t
 		G [label="static dataset" fillcolor=lightblue fontsize=40 shape=box style=filled]
 		H [label="dynamic dataset" fillcolor=lightblue fontsize=40 shape=box style=filled]
 	}
 	subgraph cluster_group4 {
-		fontsize=55 label=Overleaf labeljust=l labelloc=t
+		fontsize=55 label="GitHub action" labeljust=l labelloc=t
 		I [label=manuscript fillcolor=lightblue fontsize=40 shape=box style=filled]
 		J [label=figures fillcolor=lightblue fontsize=40 shape=box style=filled]
 	}
