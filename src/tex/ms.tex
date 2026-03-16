@@ -1,62 +1,98 @@
-% Define document class
-\documentclass[twocolumn]{aastex631}
+\documentclass[a0,portrait]{a0poster}
+\usepackage{MLZposter}
 
-% Add here any additional package you need
-% \usepackage{foo}
 
-% If you can, leave this package for last
-\usepackage{showyourwork}
-
-% Begin!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-% Title
-\title{An open source scientific article}
+%%% Top box of poster showing the Logos of MLZ, ... %%%
+\begin{tikzpicture}[remember picture,overlay]
+  \draw[color=mlzblue,line width=6pt,rounded corners=20pt] (current page.north west) ++(4.5,0) -- +(0,-6.9) -- +(84,-6.9);
+  \node[color=mlztextgray,text width=12cm] at (72.8,-1)
+       {\includegraphics[height=4.5cm]{Logos/mlz_blue_rgb.png}};
+  \node[color=mlztextgray,text width=9cm] at (9.5,-1)
+       {\includegraphics[height=5.0cm]{Logos/hereon.png}};     
+\end{tikzpicture}
 
-% Author list
-\author{@majumdararn}
+%%% Title block %%%
+\begin{textblock}{86}(7.5,9)
+   \begin{center}
+   \color{mlzblue}
+    {\bfseries\veryHuge Workflow for creating a reproducible research article using showyourwork \\[1.2ex]}
+    {\LARGE \underline{Arnab Majumdar}\textsuperscript{1,2}, Sebastian Busch\textsuperscript{1,2}}\\[1.5ex]
+    {\large\textsuperscript{1}German Engineering Materials Science Center (GEMS) at Heinz Maier-Leibnitz Zentrum (MLZ), Helmholtz-Zentrum Hereon,\\ \textsuperscript{2}Institute of Materials Physics, Helmholtz-Zentrum Hereon.}\\[.9ex]
+    
+   \end{center}
+\end{textblock}
 
-% Abstract with filler text
-\begin{abstract}
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-    Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.
-    Curabitur dictum gravida mauris, consectetuer id, vulputate a, magna.
-    Donec vehicula augue eu neque, morbi tristique senectus et netus et.
-    Mauris ut leo, cras viverra metus rhoncus sem, nulla et lectus vestibulum.
-    Phasellus eu tellus sit amet tortor gravida placerat.
-    Integer sapien est, iaculis in, pretium quis, viverra ac, nunc.
-    Praesent eget sem vel leo ultrices bibendum.
-    Aenean faucibus, morbi dolor nulla, malesuada eu, pulvinar at, mollis ac.
-    Curabitur auctor semper nulla donec varius orci eget risus.
-    Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam.
-    Duis eget orci sit amet orci dignissim rutrum.
-\end{abstract}
 
-% Main body with filler text
-\section{Introduction}
-\label{sec:intro}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{textblock}{86}(7.5,19.5)
+\SECTION{Introduction}
+\begin{tikzpicture}
+	\anode{0}{0}{0.90\textwidth}{We are working with showyourwork}
+	
+	% \anode{26}{10}{0.30\textwidth}{
+	% \SUBSECTION{Subsection 2 of 3}
+	
+	% Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit.
+	% }
+	
+	% \anode{52}{0}{0.30\textwidth}{
+	% \SUBSECTION{Subsection 3 of 3}
+	
+	% Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+	% }
+\end{tikzpicture}
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.
-Curabitur dictum gravida mauris, consectetuer id, vulputate a, magna.
-Donec vehicula augue eu neque, morbi tristique senectus et netus et.
-Mauris ut leo, cras viverra metus rhoncus sem, nulla et lectus vestibulum.
-Phasellus eu tellus sit amet tortor gravida placerat.
-Integer sapien est, iaculis in, pretium quis, viverra ac, nunc.
-Praesent eget sem vel leo ultrices bibendum.
-Aenean faucibus, morbi dolor nulla, malesuada eu, pulvinar at, mollis ac.
-Curabitur auctor semper nulla donec varius orci eget risus.
-Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam.
-Duis eget orci sit amet orci dignissim rutrum.
+\end{textblock}
 
-Nam dui ligula, fringilla a, euismod sodales, sollici- tudin vel, wisi.
-Morbi auctor lorem non justo, nam lacus libero, pretium at, lobortis vitae.
-Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna.
-Morbi ac orci et nisl hendrerit mollis, suspendisse ut massa, cras nec ante.
-Pellentesque a nulla cum sociis natoque penatibus et magnis dis parturient.
-Aliquam tincidunt urna, nulla ullamcorper vestibulum turpis.
-Pellentesque cursus luctus mauris \citep{Luger2021}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{textblock}{86}(7.5,41)
+\SECTION{Title of Section 2}
+\begin{tikzpicture}
+	\anode{0}{0}{35cm}{
+	\SUBSECTION{This is the title of a subsection}
+	
+		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+	}
+	
+	\anode{40}{0}{35cm}{
+	
+		Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+	
+	}
+\end{tikzpicture}
+\end{textblock}
 
-\bibliography{bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{textblock}{86}(7.5,66.5)
+\SECTION{Title of Section 3}
+
+\end{textblock}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{textblock}{86}(7.5,86.5)
+\SECTION{References}
+
+\end{textblock}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{tikzpicture}[remember picture,overlay]
+  \draw[color=mlzblue,line width=6pt,rounded corners=20pt] (current page.south west) ++(0,5.2) -- +(77.5,0) -- +(77.5, -6);
+\end{tikzpicture}
+
+\begin{textblock}{86}(7.5,93.9)
+\begin{tikzpicture}
+  \anode{0}{0}{5cm}{\textbf{Contact:}}
+  \anode{4}{0.0}{20cm}{Name Arnab Majumdar\\ E-mail: arnab.majumdar@hereon.de\\ phone: +49.89.158860.771};
+  \anode{25}{0.0}{20cm}{Name Sebastian Busch\\ E-mail: sebastian.busch@hereon.de\\ phone: +49.89.158860.764};
+  \anode{66}{0}{5cm}{\includegraphics[height=3.5cm]{Logos/gems.png}};
+\end{tikzpicture}
+\end{textblock}
 
 \end{document}
+
