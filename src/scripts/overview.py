@@ -32,7 +32,7 @@ with g.subgraph(name='cluster_group4') as c4:
 with g.subgraph(name='cluster_group4') as c5:
     c4.attr(label="Final manuscript", fontsize=fs_big, labelloc="t", labeljust="l")
     c4.node('K', 'GitHub', shape='box', fontsize=fs, style="filled", fillcolor="lightblue")
-    c4.node('J', 'Arxiv', shape='box', fontsize=fs, style="filled", fillcolor="lightblue")
+    c4.node('L', 'Arxiv', shape='box', fontsize=fs, style="filled", fillcolor="lightblue")
 # g.node("data", "Data")
 # g.node("scripts", "Scripts")
 # g.node("figures", "Figures")
