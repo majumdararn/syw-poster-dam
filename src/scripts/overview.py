@@ -6,9 +6,9 @@ g = Digraph(format="pdf")
 #formatting
 fs='20'
 fs_big='30'
-g.attr(size="15, 15")   # width=8 inches, height=6 inches
+g.attr(size="15, 10")   # width=8 inches, height=6 inches
 g.attr(ratio="fill")   # compresses to fit
-g.attr('edge', arrowsize="4.0")
+g.attr('edge', arrowsize="2.0")
 
 # Nodes
 with g.subgraph(name='cluster_group1') as c1:
