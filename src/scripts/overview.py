@@ -16,6 +16,6 @@ g.edge("scripts", "figures")
 g.edge("figures", "tex")
 g.edge("tex", "pdf")
 
-g.render("overview", view=True)
+# g.render("overview", view=True)
 
-g.render(paths.figures / 'flowchart', format='pdf', cleanup=True)
+g.render(paths.figures / 'overview', format='pdf', cleanup=True)
