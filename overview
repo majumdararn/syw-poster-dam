@@ -26,8 +26,7 @@ digraph {
 	}
 	subgraph cluster_group5 {
 		fontsize=55 label="Final manuscript" labeljust=l labelloc=t
-		K [label=GitHub fillcolor=lightblue fontsize=40 shape=box style=filled]
-		L [label=Arxiv fillcolor=lightblue fontsize=40 shape=box style=filled]
+		K [label="GitHub/ Arxiv" fillcolor=lightblue fontsize=40 shape=box style=filled]
 	}
 	A -> F [style=dotted]
 	F -> I
@@ -36,5 +35,5 @@ digraph {
 	H -> J
 	B -> H [style=dotted]
 	H -> G [style=dotted]
-	c4 -> c5 [style=dotted]
+	J -> K
 }
