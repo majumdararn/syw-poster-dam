@@ -4,9 +4,24 @@ digraph {
 	edge [arrowsize=4.0]
 	subgraph cluster_group1 {
 		fontsize=55 label=Overleaf labeljust=l labelloc=t
+		A [label=manuscript fillcolor=lightblue fontsize=40 shape=box style=filled]
+	}
+	subgraph cluster_group2 {
 		fontsize=55 label=Overleaf labeljust=l labelloc=t
-		D [label="Overleaf Project" fillcolor=lightblue fontsize=40 shape=box style=filled]
-		E [label=Compile fillcolor=lightblue fontsize=40 shape=box style=filled]
-		U [label="Overleaf pdf" fillcolor=lightblue fontsize=40 shape=box style=filled]
+		B [label="analysis scripts" fillcolor=lightblue fontsize=40 shape=box style=filled]
+		C [label="figure scripts" fillcolor=lightblue fontsize=40 shape=box style=filled]
+		D [label=environment fillcolor=lightblue fontsize=40 shape=box style=filled]
+		E [label=rules fillcolor=lightblue fontsize=40 shape=box style=filled]
+		F [label=manuscript fillcolor=lightblue fontsize=40 shape=box style=filled]
+	}
+	subgraph cluster_group3 {
+		fontsize=55 label=Overleaf labeljust=l labelloc=t
+		G [label="static dataset" fillcolor=lightblue fontsize=40 shape=box style=filled]
+		H [label="dynamic dataset" fillcolor=lightblue fontsize=40 shape=box style=filled]
+	}
+	subgraph cluster_group4 {
+		fontsize=55 label=Overleaf labeljust=l labelloc=t
+		I [label=manuscript fillcolor=lightblue fontsize=40 shape=box style=filled]
+		J [label=figures fillcolor=lightblue fontsize=40 shape=box style=filled]
 	}
 }
