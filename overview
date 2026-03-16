@@ -1,7 +1,7 @@
 digraph {
-	size="15, 15"
+	size="15, 10"
 	ratio=fill
-	edge [arrowsize=4.0]
+	edge [arrowsize=2.0]
 	subgraph cluster_group1 {
 		fontsize=30 label=Overleaf labeljust=l labelloc=t
 		A [label=manuscript fillcolor=lightblue fontsize=20 shape=box style=filled]
