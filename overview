@@ -24,4 +24,6 @@ digraph {
 		I [label=manuscript fillcolor=lightblue fontsize=40 shape=box style=filled]
 		J [label=figures fillcolor=lightblue fontsize=40 shape=box style=filled]
 	}
+	subgraph cluster_group4 {
+	}
 }
