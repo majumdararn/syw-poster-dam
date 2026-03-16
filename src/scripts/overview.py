@@ -40,7 +40,8 @@ with g.subgraph(name='cluster_group5') as c5:
 # g.node("pdf", "Article PDF")
 
 # # Workflow
-g.edge("A", "F")
+g.edge("A", "F", style='dotted')
+g.edge("F", "I")
 # g.edge("data", "scripts")
 # g.edge("scripts", "figures")
 # g.edge("figures", "tex")
