@@ -61,18 +61,18 @@
 \begin{textblock}{86}(7.5,43)
 \SECTION{Reproducible article using showyourwork}
 \begin{tikzpicture}
-	% \anode{0}{0}{74cm}{
- %    This poster demonstrates a practical workflow for creating fully reproducible research articles using \emph{showyourwork!}~\cite{Luger2021}. The framework hosts analysis scripts, software requirements, and the manuscript in a GitHub repository, enabling transparent and reproducible research articles. An independent investigator can clone the repository to fully reproduce the scientific article. In the generated manuscript, each figure caption contains two links: one to the dataset stored on Zenodo used to produce the figure, and another to the script that generated it. In addition, \emph{showyourwork!} supports editing through Overleaf, facilitating collaborative scientific writing. (see figure below)        
- %    \begin{figure}
- %    {
- %        \script{overview.py}
- %        \begin{center}
- %        \includegraphics[width=40cm, trim=0cm 1.3cm 0cm 1cm, clip]{figures/overview.pdf}
- %        \caption{haha\label{fig:fig_flw_chart}}    
- %        \end{center}
- %    }
- %    \end{figure}
-	% }
+	\anode{0}{0}{74cm}{
+    This poster demonstrates a practical workflow for creating fully reproducible research articles using \emph{showyourwork!}~\cite{Luger2021}. The framework hosts analysis scripts, software requirements, and the manuscript in a GitHub repository, enabling transparent and reproducible research articles. An independent investigator can clone the repository to fully reproduce the scientific article. In the generated manuscript, each figure caption contains two links: one to the dataset stored on Zenodo used to produce the figure, and another to the script that generated it. In addition, \emph{showyourwork!} supports editing through Overleaf, facilitating collaborative scientific writing. (see figure below)        
+    \begin{figure}
+    {
+        \script{overview.py}
+        \begin{center}
+        \includegraphics[width=40cm, trim=0cm 1.3cm 0cm 1cm, clip]{figures/overview.pdf}
+        \caption{haha\label{fig:fig_flw_chart}}    
+        \end{center}
+    }
+    \end{figure}
+	}
 \end{tikzpicture}
 \end{textblock}
 
@@ -85,17 +85,14 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{textblock}{86}(7.5,86.5)
+\begin{textblock}{86}(7.5,85)
 \SECTION{References}
 \begin{tikzpicture}
-	\anode{0}{0}{0.9\textwidth}{
+	\anode{0}{0}{74cm}{
     \renewcommand{\refname}{}   % remove heading
     \vspace{-1.5em}                    % remove extra vertical space (adjust as needed)
-    \bibliographystyle{IEEEtran}
+    \bibliographystyle{unsrtnat}
     \bibliography{bib}
- %    \bibliographystyle{unsrtnat}
-	% % \bibliographystyle{unsrt}  % numeric, order of appearance
- %    \bibliography{bib}          % your .bib file (without .bib extension)
 	}
 \end{tikzpicture}
 \end{textblock}
