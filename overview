@@ -1,5 +1,5 @@
 digraph {
-	size="20, 1"
+	size="5, 1"
 	ratio=fill
 	edge [arrowsize=2.0]
 	subgraph cluster_group1 {
