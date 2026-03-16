@@ -29,5 +29,6 @@ digraph {
 		K [label=GitHub fillcolor=lightblue fontsize=40 shape=box style=filled]
 		L [label=Arxiv fillcolor=lightblue fontsize=40 shape=box style=filled]
 	}
-	A -> F
+	A -> F [style=dotted]
+	F -> I
 }
