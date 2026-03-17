@@ -35,7 +35,7 @@ dependencies:
     - src/data/data.tar.gz
   src/scripts/red_data_plot.py:
     - src/scripts/red_data_gen.py
-    - src/data/red_data
+    - src/data/data_red.tar.gz
   # src/tex/ms.tex:
   #   - src/tex/stylesheet.tex
 
