@@ -10,7 +10,7 @@ import paths
 
 # open tarfile
 tar_path=paths.data / 'data.tar.gz'
-data_tar=tarfile.open(tar_path, 'r:gz')
+data=tarfile.open(tar_path, 'r:gz')
 
 # # cwd
 # print('Getting current working dir (cwd):')
