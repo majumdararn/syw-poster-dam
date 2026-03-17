@@ -8,26 +8,26 @@ import numpy as np
 import matplotlib.pyplot as plt
 import paths
 
-# functions
-def data_angle_cor(x_raw, y_raw, angle):
-    """
-    correct rotation of data
-    x_raw = raw x data
-    y_raw = raw y data
-    angle = anglre to be corrected
-    """
-    # angle for undo rotation
-    angle_opp=-angle
+# # functions
+# def data_angle_cor(x_raw, y_raw, angle):
+#     """
+#     correct rotation of data
+#     x_raw = raw x data
+#     y_raw = raw y data
+#     angle = anglre to be corrected
+#     """
+#     # angle for undo rotation
+#     angle_opp=-angle
 
-    # coefficients for undo rotation
-    cos_a = np.cos(angle_opp)
-    sin_a = np.sin(angle_opp)
+#     # coefficients for undo rotation
+#     cos_a = np.cos(angle_opp)
+#     sin_a = np.sin(angle_opp)
 
-    # undo rotation
-    x_angle_cor = x_raw * cos_a - y_raw * sin_a
-    y_angle_cor = x_raw * sin_a + y_raw * cos_a
+#     # undo rotation
+#     x_angle_cor = x_raw * cos_a - y_raw * sin_a
+#     y_angle_cor = x_raw * sin_a + y_raw * cos_a
 
-    return x_angle_cor, y_angle_cor
+#     return x_angle_cor, y_angle_cor
 
 # create dir for savinf reduced data
 final_dir='data_red'
@@ -43,6 +43,7 @@ exp_idx=0
 while True:
     try:
         txt_file_path = tar.extractfile(f'red_data/exp_{exp_idx}/data.txt')
+        print(txt_file_path)
         data = np.loadtxt(txt_file_path, comments='#', dtype=float)
         with open(txt_file_path, "r") as f:
             # Read the first two lines
