@@ -44,6 +44,7 @@ while True:
     try:
         txt_file_path = tar.extractfile(f'data/exp_{exp_idx}/data.txt')
         data = np.loadtxt(txt_file_path, comments='#', dtype=float)
+        print(data)
         with open(txt_file_path, "r") as f:
             # Read the first two lines
             _ = f.readline()  # first line (skip)
@@ -64,7 +65,7 @@ while True:
         final_txt_file_loc=os.path.join(final_data_dir, final_txt_file)
         data_red = np.column_stack((x_red, y_red))
         np.savetxt(final_txt_file_loc,
-                   data_red, header='x_red x_red', fmt="%.6f")
+                   data_red, header='x_red y_red', fmt="%.6f")
         exp_idx += 1
     except KeyError:
         break
