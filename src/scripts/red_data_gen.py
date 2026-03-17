@@ -70,8 +70,9 @@ while True:
         break
 # make a tar file
 # Create a compressed tar.gz archive
-with tarfile.open('data_red.tar.gz', 'w:gz') as tar:
+with tarfile.open(paths.data / 'data_red.tar.gz', 'w:gz') as tar:
     tar.add('data_red', arcname=os.path.basename('data_red'))
+
 # print('Info>> Saved reduced data as tar file')
 
 # # open tarfile
