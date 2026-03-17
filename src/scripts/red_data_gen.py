@@ -39,7 +39,7 @@ tar=tarfile.open(tar_path, 'r:gz')
 
 # read trail
 exp_idx=0
-
+print('I am here')
 while True:
     try:
         txt_file_path = tar.extractfile(f'data/exp_{exp_idx}/data.txt')
