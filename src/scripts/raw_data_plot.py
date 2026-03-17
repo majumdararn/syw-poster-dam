@@ -10,7 +10,7 @@ import paths
 
 # open tarfile
 tar_path=paths.data / 'data.tar.gz'
-data=tarfile.open(tar_path, 'r:gz')
+tar=tarfile.open(tar_path, 'r:gz')
 
 # # cwd
 # print('Getting current working dir (cwd):')
@@ -27,10 +27,10 @@ data=tarfile.open(tar_path, 'r:gz')
 
 # read trail
 exp_idx=0
-while os.path.exists(f'data/exp_{exp_idx}'):
+while os.path.exists(tar.extractfile(f'data/exp_{exp_idx}')):
     # print(f'exists exp data/exp_{exp_idx}')
     # print(f'reading data.txt from data/exp_{exp_idx}')
-    txt_file_path=f'data/exp_{exp_idx}/data.txt'
+    txt_file_path=tar.extractfile(f'data/exp_{exp_idx}/data.txt')
     # with open(txt_file_path, "r") as f:
     #     # Read the first two lines
     #     _ = f.readline()  # first line (skip)
