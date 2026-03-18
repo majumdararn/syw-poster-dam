@@ -36,6 +36,7 @@ os.makedirs(final_dir, exist_ok=True)
 # open tarfile
 tar_path=paths.data / 'red_data.tar.gz'
 tar=tarfile.open(tar_path, 'r:gz')
+print("I am here")
 
 # read trail
 exp_idx=0
