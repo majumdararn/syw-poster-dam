@@ -29,12 +29,12 @@ import paths
 
 #     return x_angle_cor, y_angle_cor
 
-# create dir for savinf reduced data
-final_dir='data_red'
-os.makedirs(final_dir, exist_ok=True)
+# # create dir for savinf reduced data
+# final_dir='data_red'
+# os.makedirs(final_dir, exist_ok=True)
 
 # open tarfile
-tar_path=paths.data / 'data.tar.gz'
+tar_path=paths.data / 'red_data.tar.gz'
 tar=tarfile.open(tar_path, 'r:gz')
 print("I am here")
 
@@ -46,18 +46,18 @@ for name in tar.getnames():
 
 while True:
     try:
-        txt_file_name = f'data/exp_{exp_idx}/data.txt'
+        txt_file_name = f'data/exp_{exp_idx}_red/data.txt'
         txt_file_path = tar.extractfile(txt_file_name)
         # txt_file_name=f'data/exp_{exp_idx}/data.txt'
         data = np.loadtxt(txt_file_path, comments='#', dtype=float)
-        txt_file_path = tar.extractfile(txt_file_name)
-        with txt_file_path as f:
-            # Read the first two lines
-            _ = f.readline()  # first line (skip)
-            second_line = f.readline().decode().strip()  # second line
-            alpha_val_str=second_line[9:]
-            alpha_val=float(alpha_val_str)
-            print(f'Rotation angle is: {alpha_val}')
+        # txt_file_path = tar.extractfile(txt_file_name)
+        # with txt_file_path as f:
+        #     # Read the first two lines
+        #     _ = f.readline()  # first line (skip)
+        #     second_line = f.readline().decode().strip()  # second line
+        #     alpha_val_str=second_line[9:]
+        #     alpha_val=float(alpha_val_str)
+        #     print(f'Rotation angle is: {alpha_val}')
         x_red=data[:,0]
         y_red=data[:,1]
         # x_red, y_red=data_angle_cor(x_noise, y_noise, alpha_val)
