@@ -75,4 +75,4 @@ while True:
 # create a compressed tar.gz archive
 final_tar_name=paths.data / 'red_data.tar.gz'
 with tarfile.open(final_tar_name, 'w:gz') as tar:
-    tar.add(final_tar_name, arcname=os.path.basename('red_data.tar.gz'))
+    tar.add(final_dir, arcname=os.path.basename('red_data.tar.gz'))
