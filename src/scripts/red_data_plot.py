@@ -56,7 +56,7 @@ while True:
             _ = f.readline()                      # "# x y noisy_x noisy_y"
 
             # extract alpha
-            alpha_val = float(second_line.split("=")[1])
+            alpha_val = (second_line.split("=")[1])
             print(f"Rotation angle is: {alpha_val}")
             # # Read the first two lines
             # _ = f.readline()  # first line (skip)
