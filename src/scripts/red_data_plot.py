@@ -36,17 +36,18 @@ import paths
 # open tarfile
 tar_path=paths.data / 'red_data.tar.gz'
 tar=tarfile.open(tar_path, 'r:gz')
-print("I am here")
+
 
 # read trail
 exp_idx=0
 
-for name in tar.getnames():
-    print(name)
+# for name in tar.getnames():
+#     print(name)
 
 while True:
     try:
         txt_file_name = f'red_data/red_exp_{exp_idx}/red_data.txt'
+        print("I am here")
         txt_file_path = tar.extractfile(txt_file_name)
         # txt_file_name=f'data/exp_{exp_idx}/data.txt'
         data = np.loadtxt(txt_file_path, comments='#', dtype=float)
