@@ -64,9 +64,9 @@ while True:
         # reduced data file
         final_txt_file='red_data.txt'
         final_txt_file_loc=os.path.join(final_exp_dir, final_txt_file)
-        data_red = np.column_stack((red_x, red_y))
+        red_data = np.column_stack((red_x, red_y))
         np.savetxt(final_txt_file_loc,
-                   data_red, header='reduced_x reduced_y', fmt="%.6f")
+                   red_data, header='reduced_x reduced_y', fmt="%.6f")
         # next experiment
         exp_idx += 1
     except KeyError:
