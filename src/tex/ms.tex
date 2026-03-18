@@ -79,37 +79,40 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{textblock}{86}(7.5,66.5)
-\SECTION{Title of Section 3}
+\SECTION{Demonstration}
 \begin{tikzpicture}
-	\anode{0}{0}{24cm}{
+    \anode{0}{0}{74cm}{
+        The following figure demonstrates a use case of a reproducible workflow where raw data is reduced and analyzed.
+    }
+	\anode{0}{5}{24cm}{
     \begin{figure}
     {
         \script{raw_data_plot.py}
         \begin{center}
         \includegraphics[width=10cm, trim=0cm 1.3cm 0cm 1cm, clip]{figures/raw_data.pdf}
-        \caption{haha\label{fig:fig_raw_data}}    
+        \caption{Raw data: 1D sinusoinal curve with rotation\label{fig:fig_raw_data}}    
         \end{center}
     }
     \end{figure}
 	}
-    \anode{24}{0}{24cm}{
+    \anode{24}{5}{24cm}{
     \begin{figure}
     {
         \script{red_data_plot.py}
         \begin{center}
         \includegraphics[width=10cm, trim=0cm 1.3cm 0cm 1cm, clip]{figures/red_data.pdf}
-        \caption{haha\label{fig:fig_red_data}}    
+        \caption{Reduce data: 1D sinusoinal curve without rotation\label{fig:fig_red_data}}    
         \end{center}
     }
     \end{figure}
     }
-    \anode{48}{0}{24cm}{
+    \anode{48}{5}{24cm}{
     \begin{figure}
     {
         \script{ana_data_plot.py}
         \begin{center}
         \includegraphics[width=10cm, trim=0cm 1.3cm 0cm 1cm, clip]{figures/ana_data.pdf}
-        \caption{haha\label{fig:fig_ana_data}}    
+        \caption{data analysis: angular freq and phase shift (expected vs fitted)\label{fig:fig_ana_data}}    
         \end{center}
     }
     \end{figure}
