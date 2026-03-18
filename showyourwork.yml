@@ -116,7 +116,7 @@ tectonic_args: []
 
 marmargin_icons:
     custom:
-        dataset: "0.5,0.2,0.6"
+        dataset: "1.0,0.2,0.6"
 
 # Enable verbose output?
 verbose: false
