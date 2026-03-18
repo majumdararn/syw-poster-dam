@@ -31,12 +31,12 @@ datasets:
 
 # Custom file dependencies
 dependencies:
-  # src/scripts/raw_data_plot.py:
-  #   - src/data/data.tar.gz
-  # src/scripts/red_data_plot.py:
-  #   - src/data/data.tar.gz
-  #   - src/data/red_data.tar.gz
-  #   - src/scripts/red_data_gen.py
+  src/scripts/raw_data_plot.py:
+    - src/data/data.tar.gz
+  src/scripts/red_data_plot.py:
+    - src/data/data.tar.gz
+    - src/data/red_data.tar.gz
+    - src/scripts/red_data_gen.py
   src/scripts/ana_data_plot.py:
     - src/data/data.tar.gz
     - src/data/red_data.tar.gz
