@@ -49,8 +49,10 @@ while True:
         txt_file_name = f'red_data/red_exp_{exp_idx}/red_data.txt'
         print("I am here")
         txt_file_path = tar.extractfile(txt_file_name)
+        print("I am here")
         # txt_file_name=f'data/exp_{exp_idx}/data.txt'
         data = np.loadtxt(txt_file_path, comments='#', dtype=float)
+        print("I am here")
         # txt_file_path = tar.extractfile(txt_file_name)
         # with txt_file_path as f:
         #     # Read the first two lines
