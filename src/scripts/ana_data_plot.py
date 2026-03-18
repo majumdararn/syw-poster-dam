@@ -7,7 +7,6 @@ import tarfile
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
-import h5py
 import paths
 
 # # functions
