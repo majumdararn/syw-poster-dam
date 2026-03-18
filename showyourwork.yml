@@ -116,7 +116,7 @@ tectonic_args: []
 
 margin_icons:
     custom:
-        dataset: "1.0,0.2,0.6"
+        github: "1.0,1.0,0.6"
 
 # Enable verbose output?
 verbose: false
