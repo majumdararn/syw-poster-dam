@@ -57,7 +57,7 @@ while True:
 
 # save analyzed data
 # create dir for savinf reduced data
-final_dir=paths / 'ana_data'
+final_dir=paths.data / 'ana_data'
 os.makedirs(final_dir, exist_ok=True)
 # # reduced data dir for exp
 # final_exp_dir=f'ana_exp_{exp_idx}'
