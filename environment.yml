@@ -6,4 +6,4 @@ dependencies:
   - python=3.10
   - matplotlib==3.10
   - python-graphviz=0.21
-  - scipy=1.17.1
+  - scipy=1.11
