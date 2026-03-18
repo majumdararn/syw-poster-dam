@@ -46,15 +46,15 @@ while True:
         txt_file_path = tar.extractfile(f'data/exp_{exp_idx}/data.txt')
         # txt_file_name=f'data/exp_{exp_idx}/data.txt'
         data = np.loadtxt(txt_file_path, comments='#', dtype=float)
-        with txt_file_path as f:
-            # Read the first two lines
-            _ = f.readline()  # first line (skip)
-            # print()
-            second_line = f.readline().decode()  # second line
-            print(second_line)
-            alpha_val_str=second_line[9:]
-            alpha_val=float(alpha_val_str)
-            print(f'Rotation angle is: {alpha_val}')
+        # with txt_file_path as f:
+        #     # Read the first two lines
+        #     _ = f.readline()  # first line (skip)
+        #     # print()
+        #     second_line = f.readline().decode()  # second line
+        #     print(second_line)
+        #     alpha_val_str=second_line[9:]
+        #     alpha_val=float(alpha_val_str)
+        #     print(f'Rotation angle is: {alpha_val}')
         x_red=data[:,0]
         y_red=data[:,1]
         # x_red, y_red=data_angle_cor(x_noise, y_noise, alpha_val)
