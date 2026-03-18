@@ -119,6 +119,8 @@ margin_icons:
     github: "1.0,1.0,0.6"
     dataset: "1.0,1.3,0.6"
     cache: "1.0,1.6,0.6"
+  horizontal_offset: 20
+
     
 
 # Enable verbose output?
