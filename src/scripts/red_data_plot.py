@@ -49,7 +49,8 @@ while True:
         with txt_file_path as f:
             # Read the first two lines
             _ = f.readline()  # first line (skip)
-            second_line = f.readline()  # second line
+            # print()
+            second_line = f.readline().decode()  # second line
             print(second_line)
             alpha_val_str=second_line[9:]
             alpha_val=float(alpha_val_str)
