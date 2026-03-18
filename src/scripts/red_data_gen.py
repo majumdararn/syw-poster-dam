@@ -42,10 +42,11 @@ exp_idx=0
 print('I am here')
 while True:
     try:
-        txt_file_path = tar.extractfile(f'data/exp_{exp_idx}/data.txt')
+        txt_file_name = f'data/exp_{exp_idx}/data.txt'
+        txt_file_path = tar.extractfile(txt_file_name)
         data = np.loadtxt(txt_file_path, comments='#', dtype=float)
-        print(data)
-        with open(txt_file_path, "r") as f:
+        txt_file_path = tar.extractfile(txt_file_name)
+        with txt_file_path as f:
             # Read the first two lines
             _ = f.readline()  # first line (skip)
             second_line = f.readline()  # second line
