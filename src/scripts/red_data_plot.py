@@ -41,6 +41,9 @@ print("I am here")
 # read trail
 exp_idx=0
 
+for name in tar.getnames():
+    print(name)
+
 while True:
     try:
         txt_file_path = tar.extractfile(f'data/exp_{exp_idx}/data.txt')
