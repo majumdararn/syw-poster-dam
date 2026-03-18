@@ -52,22 +52,12 @@ while True:
         data = np.loadtxt(txt_file_path, comments='#', dtype=float)
         txt_file_path = tar.extractfile(txt_file_name)
         with txt_file_path as f:
-            # read header
-            _ = f.readline()                      # "# Experimental condition:"
-            second_line = f.readline().decode()   # "# alpha = ..."
-            _ = f.readline()                      # "# x y noisy_x noisy_y"
-            print(repr(second_line))
-            # extract alpha
-            alpha_val = (second_line.split("=")[1])
-            print(f"Rotation angle is: {alpha_val}")
-            # # Read the first two lines
-            # _ = f.readline()  # first line (skip)
-            # # print()
-            # second_line = f.readline().decode().strip()  # second line
-            # print(second_line)
-        #     alpha_val_str=second_line[9:]
-        #     alpha_val=float(alpha_val_str)
-        #     print(f'Rotation angle is: {alpha_val}')
+            # Read the first two lines
+            _ = f.readline()  # first line (skip)
+            second_line = f.readline().decode().strip()  # second line
+            alpha_val_str=second_line[9:]
+            alpha_val=float(alpha_val_str)
+            print(f'Rotation angle is: {alpha_val}')
         x_red=data[:,0]
         y_red=data[:,1]
         # x_red, y_red=data_angle_cor(x_noise, y_noise, alpha_val)
