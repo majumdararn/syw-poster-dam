@@ -46,9 +46,11 @@ for name in tar.getnames():
 
 while True:
     try:
-        txt_file_path = tar.extractfile(f'data/exp_{exp_idx}/data.txt')
+        txt_file_name = f'data/exp_{exp_idx}/data.txt'
+        txt_file_path = tar.extractfile(txt_file_name)
         # txt_file_name=f'data/exp_{exp_idx}/data.txt'
         data = np.loadtxt(txt_file_path, comments='#', dtype=float)
+        txt_file_path = tar.extractfile(txt_file_name)
         with txt_file_path as f:
             # read header
             _ = f.readline()                      # "# Experimental condition:"
