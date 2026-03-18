@@ -30,7 +30,7 @@ def data_angle_cor(x_raw, y_raw, angle):
     return x_angle_cor, y_angle_cor
 
 # create dir for savinf reduced data
-final_dir=paths.data / 'data_red'
+final_dir=paths.data / 'red_data'
 os.makedirs(final_dir, exist_ok=True)
 
 # open tarfile
@@ -72,8 +72,8 @@ while True:
         break
 # make a tar file
 # Create a compressed tar.gz archive
-with tarfile.open(paths.data / 'data_red.tar.gz', 'w:gz') as tar:
-    tar.add(paths.data / 'data_red', arcname=os.path.basename(paths.data / 'data_red'))
+with tarfile.open(paths.data / 'red_data.tar.gz', 'w:gz') as tar:
+    tar.add(paths.data / 'red_data', arcname=os.path.basename(paths.data / 'red_data'))
 
 # print('Info>> Saved reduced data as tar file')
 
