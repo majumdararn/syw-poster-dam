@@ -59,6 +59,7 @@ while True:
         #     alpha_val=float(alpha_val_str)
         #     print(f'Rotation angle is: {alpha_val}')
         x_red=data[:,0]
+        print(x_red)
         y_red=data[:,1]
         # x_red, y_red=data_angle_cor(x_noise, y_noise, alpha_val)
         plt.plot(x_red,y_red,'o')
