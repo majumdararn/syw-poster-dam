@@ -11,8 +11,8 @@ dag:
   group_by_type: false
   # Custom graph attributes
   graph_attr:
-    ranksep: "1"
-    nodesep: "0.9"
+    ranksep: "20"
+    nodesep: "2"
   # Custom node attributes
   node_attr:
     shape: "box"
