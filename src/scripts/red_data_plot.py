@@ -54,7 +54,7 @@ while True:
             _ = f.readline()                      # "# Experimental condition:"
             second_line = f.readline().decode()   # "# alpha = ..."
             _ = f.readline()                      # "# x y noisy_x noisy_y"
-
+            print(repr(second_line))
             # extract alpha
             alpha_val = (second_line.split("=")[1])
             print(f"Rotation angle is: {alpha_val}")
