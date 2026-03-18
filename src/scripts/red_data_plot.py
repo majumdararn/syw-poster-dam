@@ -44,9 +44,9 @@ exp_idx=0
 while True:
     try:
         txt_file_path = tar.extractfile(f'data/exp_{exp_idx}/data.txt')
-        print(txt_file_path)
+        # txt_file_name=f'data/exp_{exp_idx}/data.txt'
         data = np.loadtxt(txt_file_path, comments='#', dtype=float)
-        with open(txt_file_path, "r") as f:
+        with txt_file_path as f:
             # Read the first two lines
             _ = f.readline()  # first line (skip)
             second_line = f.readline()  # second line
