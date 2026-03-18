@@ -115,10 +115,11 @@ tectonic_args: []
 # preprocess_arxiv_script: my_preprocess_script.sh
 
 margin_icons:
-    custom:
-        github: "1.0,1.0,0.6"
-        dataset: "1.0,1.3,0.6"
-        cache: "1.0,1.6,0.6"
+  custom:
+    github: "1.0,1.0,0.6"
+    dataset: "1.0,1.3,0.6"
+    cache: "1.0,1.6,0.6"
+    
 
 # Enable verbose output?
 verbose: false
