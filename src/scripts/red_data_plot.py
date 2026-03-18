@@ -46,7 +46,7 @@ for name in tar.getnames():
 
 while True:
     try:
-        txt_file_name = f'data/exp_{exp_idx}_red/data.txt'
+        txt_file_name = f'data/exp_{exp_idx}_red/data_red.txt'
         txt_file_path = tar.extractfile(txt_file_name)
         # txt_file_name=f'data/exp_{exp_idx}/data.txt'
         data = np.loadtxt(txt_file_path, comments='#', dtype=float)
