@@ -34,7 +34,7 @@ final_dir='data_red'
 os.makedirs(final_dir, exist_ok=True)
 
 # open tarfile
-tar_path=paths.data / 'red_data.tar.gz'
+tar_path=paths.data / 'data.tar.gz'
 tar=tarfile.open(tar_path, 'r:gz')
 print("I am here")
 
@@ -43,7 +43,7 @@ exp_idx=0
 
 while True:
     try:
-        txt_file_path = tar.extractfile(f'red_data/exp_{exp_idx}/data.txt')
+        txt_file_path = tar.extractfile(f'data/exp_{exp_idx}/data.txt')
         print(txt_file_path)
         data = np.loadtxt(txt_file_path, comments='#', dtype=float)
         with open(txt_file_path, "r") as f:
