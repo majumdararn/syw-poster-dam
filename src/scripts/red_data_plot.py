@@ -50,11 +50,19 @@ while True:
         # txt_file_name=f'data/exp_{exp_idx}/data.txt'
         data = np.loadtxt(txt_file_path, comments='#', dtype=float)
         with txt_file_path as f:
-            # Read the first two lines
-            _ = f.readline()  # first line (skip)
-            # print()
-            second_line = f.readline().decode().strip()  # second line
-            print(second_line)
+            # read header
+            _ = f.readline()                      # "# Experimental condition:"
+            second_line = f.readline().decode()   # "# alpha = ..."
+            _ = f.readline()                      # "# x y noisy_x noisy_y"
+
+            # extract alpha
+            alpha_val = float(second_line.split("=")[1])
+            print(f"Rotation angle is: {alpha_val}")
+            # # Read the first two lines
+            # _ = f.readline()  # first line (skip)
+            # # print()
+            # second_line = f.readline().decode().strip()  # second line
+            # print(second_line)
         #     alpha_val_str=second_line[9:]
         #     alpha_val=float(alpha_val_str)
         #     print(f'Rotation angle is: {alpha_val}')
