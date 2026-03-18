@@ -67,6 +67,7 @@ while True:
         data_red = np.column_stack((red_x, red_y))
         np.savetxt(final_txt_file_loc,
                    data_red, header='reduced_x reduced_y', fmt="%.6f")
+        # next experiment
         exp_idx += 1
     except KeyError:
         break
