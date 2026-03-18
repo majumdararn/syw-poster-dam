@@ -114,7 +114,7 @@ tectonic_args: []
 # as input, and should modify the contents of that directory in-place.
 # preprocess_arxiv_script: my_preprocess_script.sh
 
-marmargin_icons:
+margin_icons:
     custom:
         dataset: "1.0,0.2,0.6"
 
