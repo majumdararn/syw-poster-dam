@@ -59,3 +59,7 @@
 \def\SECTION#1{\begin{tcolorbox}[colframe=mlzframe,colback=mlzblue,boxrule=6pt,arc=3mm,width=1.5\textwidth]\bfseries\Large\color{white}#1\end{tcolorbox}}
 
 \def\SUBSECTION#1{{\LARGE\color{DarkBlue}#1}\vspace{0.5cm}}
+
+\AtBeginDocument{
+  \renewcommand{\familydefault}{\sfdefault}
+}
