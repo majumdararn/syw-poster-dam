@@ -123,8 +123,8 @@ tectonic_args: []
 margin_icons:
   # monochrome: true
   colors:
-    github: "0.0,0.0,0.5"
-    dataset: "0.0,0.0,0.7"
+    github: "0.0,0.0,0.2"
+    dataset: "0.0,0.0,0.5"
     cache: "0.0,0.0,1.0"
 
 
