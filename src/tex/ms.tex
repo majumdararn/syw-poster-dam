@@ -24,8 +24,13 @@
   {\usepackage{hyperref}}
 \makeatother
 
-\renewcommand{\familydefault}{\sfdefault}
-\sffamily
+% \renewcommand{\familydefault}{\sfdefault}
+% \sffamily
+
+\AtBeginDocument{
+  \renewcommand{\familydefault}{\sfdefault}
+  \sffamily
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
