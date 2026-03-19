@@ -61,16 +61,19 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{textblock}{86}(7.5,43)
-\SECTION{Reproducible article using showyourwork}
+\SECTION{Showyourwork philosophy for reproducing scientific article}
 \begin{tikzpicture}
 	\anode{0}{0}{74cm}{
-    This poster demonstrates a practical workflow for creating fully reproducible research articles using \emph{showyourwork!}~\cite{Luger2021}. The framework hosts analysis scripts, software requirements, and the manuscript in a GitHub repository, enabling transparent and reproducible research articles. An independent investigator can clone the repository to fully reproduce the scientific article. In the generated manuscript, each figure caption contains two links: one to the dataset stored on Zenodo used to produce the figure, and another to the script that generated it. In addition, \emph{showyourwork!} supports editing through Overleaf, facilitating collaborative scientific writing. (see figure below)        
+    \emph{Showyourwork!}~\cite{Luger2021} is an open-source reproducibility framework designed to enable transparent and fully reproducible scientific research. It organizes analysis scripts, software dependencies, and the manuscript within a GitHub repository, allowing any independent researcher to clone the project and regenerate the complete article. The manuscript preparation can be integrated with Overleaf, enabling collaborative writing and seamless synchronization between analysis and documentation.
+
+    Once reproduced, figures can be modified directly by editing the underlying scripts that generate them. Raw datasets are typically accessed from a Zenodo repository with read-only permissions, while intermediate and processed data products can be automatically uploaded to a separate Zenodo repository with read–write access.
+
     \begin{figure}
     {
         \script{overview.py}
         \begin{center}
         \includegraphics[width=40cm, trim=0cm 1.3cm 0cm 1cm, clip]{figures/overview.pdf}
-        \caption{haha\label{fig:fig_flw_chart}}    
+        \caption{Framework of \emph{showyourwork!}: GitHub hosts analysis scripts, environment files, dependency rules, and the manuscript; Zenodo stores datasets; and Overleaf enables manuscript editing. Commits trigger automated figure generation and manuscript compilation via GitHub Actions, producing a final version and an arXiv-ready tarball. \label{fig:fig_flw_chart}}    
         \end{center}
     }
     \end{figure}
@@ -80,11 +83,19 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{textblock}{86}(7.5,66.5)
-\SECTION{Demonstration}
+\begin{textblock}{86}(7.5,64.5)
+\SECTION{Demonstration of reproducible workflow using showyourwork}
 \begin{tikzpicture}
     \anode{0}{0}{74cm}{
-        The following figure demonstrates a use case of a reproducible workflow where raw data is reduced and analyzed.
+        This poster was created using the \emph{showyourwork!} software and is available under Creative Commons Attribution 4.0 International license. The repository is available at \href{https://github.com/majumdararn/syw-poster-dam}. The figure \ref{fig:daphne_proposal} 
+        
+        The copy was created using the reproducibility software showyourwork!, which allows continuous integration to programmatically download the data from
+zenodo.org, create the figures, and compile the manuscript.
+Each figure caption in the electronic copy contains two links:
+one to the dataset stored on Zenodo used in the corresponding figure, and the other to the script used to make the figure. The release 1.0.0 of the git repository allows anyone to
+rebuild the entire manuscript. The datasets are available at
+https://doi.org/10.5281/zenodo.16994688, under the
+Creative Commons Attribution 4.0 International license.
     }
 	\anode{0}{5}{24cm}{
     \begin{figure}
@@ -103,7 +114,7 @@
         \script{red_data_plot.py}
         \begin{center}
         \includegraphics[width=10cm, trim=0cm 1.3cm 0cm 1cm, clip]{figures/red_data.pdf}
-        \caption{Reduce data: 1D sinusoinal curve without rotationxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\label{fig:fig_red_data}}    
+        \caption{Reduce data: 1D sinusoinal curve without rotation\label{fig:fig_red_data}}    
         \end{center}
     }
     \end{figure}
