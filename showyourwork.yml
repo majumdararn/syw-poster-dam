@@ -92,7 +92,7 @@ stamp:
   # Stamp size in inches
   size: 2.0
   # Horizontal position in inches from right edge of paper
-  xpos: 5.0
+  xpos: 4.0
   # Vertical position in inches from top edge of paper
   ypos: 5.0
   # Display of the repo URL in the stamp
