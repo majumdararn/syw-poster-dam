@@ -97,10 +97,10 @@ try:
     fit_k=ana_data[:,2]
     fit_t=ana_data[:,3]
     plt.figure(figsize=(8, 4))
-    plt.plot(org_k, '--k', label='trend of k values')
-    plt.plot(fit_k,'o', label='fitted k values')
-    plt.plot(org_t, '--k', label='trend of t values')
-    plt.plot(fit_t,'*', label='fitted t values')
+    plt.plot(org_k, '--k', label='trend of k')
+    plt.plot(fit_k,'o', label='fitted k')
+    plt.plot(org_t, '--k', label='trend of t')
+    plt.plot(fit_t,'*', label='fitted t')
     plt.xlabel('Pixel positions [A.U.]', fontsize=20)
     plt.ylabel('Measurement index [-]', fontsize=20)
     plt.tight_layout()
