@@ -3,13 +3,12 @@
 
 \RequirePackage[absolute,showboxes]{textpos} %  position textblocks at arbitary places
 \RequirePackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[normalem]{ulem}
-% \RequirePackage{times}
+\RequirePackage{times}
 \RequirePackage{tcolorbox}
 \RequirePackage{tikz}
-% \RequirePackage{sansmath}
-\renewcommand{\familydefault}{\sfdefault}
 
 % These colours are tried and tested for titles and headers. Don't other use color!
 \definecolor{mlzblue}{RGB}{27,38,75}
@@ -60,8 +59,3 @@
 \def\SECTION#1{\begin{tcolorbox}[colframe=mlzframe,colback=mlzblue,boxrule=6pt,arc=3mm,width=1.5\textwidth]\bfseries\Large\color{white}#1\end{tcolorbox}}
 
 \def\SUBSECTION#1{{\LARGE\color{DarkBlue}#1}\vspace{0.5cm}}
-
-\AtBeginDocument{
-  \renewcommand{\familydefault}{\sfdefault}
-  \sansmath
-}
