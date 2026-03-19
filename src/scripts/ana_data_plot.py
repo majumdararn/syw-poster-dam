@@ -103,6 +103,8 @@ try:
     plt.plot(fit_t,'*', label='fitted t values')
     plt.xlabel('Pixel positions [A.U.]', fontsize=18)
     plt.ylabel('Amplitude [A.U.]', fontsize=18)
+    plt.xticks(fontsize=14)
+    plt.yticks(fontsize=14)
     plt.legend(fontsize=20)
     plt.savefig(paths.figures / 'ana_data.pdf')
     # # save reduced data
