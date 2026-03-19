@@ -44,6 +44,8 @@ exp_idx=0
 # for name in tar.getnames():
 #     print(name)
 
+plt.figure(figsize=(8, 4))
+
 while True:
     try:
         txt_file_name = f'red_data/red_exp_{exp_idx}/red_data.txt'
@@ -69,6 +71,10 @@ while True:
         exp_idx += 1
     except KeyError:
         break
+plt.xlabel('x', fontsize=20)
+plt.ylabel('y', fontsize=20)
+plt.legend(fontsize=20, ncols=2, loc='center left', bbox_to_anchor=(1, 0.5))
+plt.tight_layout()
 plt.savefig(paths.figures / 'red_data.pdf')
 print('The end')
 
