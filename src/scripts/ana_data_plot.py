@@ -96,7 +96,7 @@ try:
     org_t=ana_data[:,1]
     fit_k=ana_data[:,2]
     fit_t=ana_data[:,3]
-    plt.figure(figsize=(40, 40))
+    plt.figure(figsize=(10, 10))
     plt.plot(org_k, '--k', label='trend of k values')
     plt.plot(fit_k,'o', label='fitted k values')
     plt.plot(org_t, '--k', label='trend of t values')
