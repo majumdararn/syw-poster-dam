@@ -107,6 +107,7 @@ try:
     plt.xticks(fontsize=20)
     plt.yticks(fontsize=20)
     plt.legend(fontsize=20)
+    plt.ylim(top=8)
     plt.savefig(paths.figures / 'ana_data.pdf')
     # # save reduced data
     # # reduced data dir for exp
