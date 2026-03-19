@@ -100,6 +100,7 @@ try:
     plt.plot(fit_k,'o', label='fitted k values')
     plt.plot(org_t, label='trend of t values')
     plt.plot(fit_t,'o', label='fitted t values')
+    plt.legend()
     plt.savefig(paths.figures / 'ana_data.pdf')
     # # save reduced data
     # # reduced data dir for exp
