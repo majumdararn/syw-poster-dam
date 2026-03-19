@@ -103,6 +103,7 @@ try:
     plt.plot(fit_t,'*', label='fitted t values')
     plt.xlabel('Pixel positions [A.U.]', fontsize=20)
     plt.ylabel('Amplitude [A.U.]', fontsize=20)
+    plt.tight_layout()
     plt.xticks(fontsize=20)
     plt.yticks(fontsize=20)
     plt.legend(fontsize=20)
