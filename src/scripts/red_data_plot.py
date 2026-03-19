@@ -72,8 +72,8 @@ while True:
         exp_idx += 1
     except KeyError:
         break
-plt.xlabel('x', fontsize=20)
-plt.ylabel('y', fontsize=20)
+plt.xlabel('Pixel positions [A.U.]', fontsize=20)
+plt.ylabel('Measurement amplitude [A.U.]', fontsize=20)
 plt.legend(fontsize=15, ncols=1, loc='center left', bbox_to_anchor=(1, 0.5))
 plt.tight_layout()
 plt.savefig(paths.figures / 'red_data.pdf')
