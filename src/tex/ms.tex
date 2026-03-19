@@ -87,45 +87,37 @@
 \SECTION{Demonstration of reproducible workflow using showyourwork}
 \begin{tikzpicture}
     \anode{0}{0}{74cm}{
-        This poster was created using the \emph{showyourwork!} software and is available under Creative Commons Attribution 4.0 International license. The repository is available at \href{https://github.com/majumdararn/syw-poster-dam}. The figure \ref{fig:daphne_proposal} 
-        
-        The copy was created using the reproducibility software showyourwork!, which allows continuous integration to programmatically download the data from
-zenodo.org, create the figures, and compile the manuscript.
-Each figure caption in the electronic copy contains two links:
-one to the dataset stored on Zenodo used in the corresponding figure, and the other to the script used to make the figure. The release 1.0.0 of the git repository allows anyone to
-rebuild the entire manuscript. The datasets are available at
-https://doi.org/10.5281/zenodo.16994688, under the
-Creative Commons Attribution 4.0 International license.
+        This poster is created using the \emph{showyourwork!} software and is available under Creative Commons Attribution 4.0 International license. The repository is available at \href{https://github.com/majumdararn/syw-poster-dam}{https://github.com/majumdararn/syw-poster-dam}. Each figure caption in the electronic copy hosted in GitHub contains two links: One to the dataset stored on Zenodo used in the corresponding figure and the other to the script used to make the figure. This work also demonstrates a dummy workflow of raw data processing and analysis through figures \ref{fig:fig_raw_data}, \ref{fig:fig_red_data}, and \ref{fig:fig_ana_data}. The raw data is available at \href{https://doi.org/10.5072/zenodo.471581}{https://doi.org/10.5072/zenodo.471581}, the processed (or reduced) and analyzed data are available at \href{https://doi.org/10.5072/zenodo.470887}{https://doi.org/10.5072/zenodo.470887}.
     }
-	\anode{0}{5}{24cm}{
+	\anode{0}{5.5}{20cm}{
     \begin{figure}
     {
         \script{raw_data_plot.py}
         \begin{center}
-        \includegraphics[width=10cm, trim=0cm 1.3cm 0cm 1cm, clip]{figures/raw_data.pdf}
-        \caption{Raw data: 1D sinusoinal curve with rotation\label{fig:fig_raw_data}}    
+        \includegraphics[width=10cm, trim=0cm 0cm 0cm 0cm, clip]{figures/raw_data.pdf}
+        \caption{Raw data: 1D sinusoidal amplitude with a background, creating angular distortion in each measurement. The value of angular distortion is recorded in the raw data as alpha. The raw data and plot scripts can be found by clicking on the icons on the left.\label{fig:fig_raw_data}}    
         \end{center}
     }
     \end{figure}
 	}
-    \anode{24}{5}{24cm}{
+    \anode{27}{5.5}{20cm}{
     \begin{figure}
     {
         \script{red_data_plot.py}
         \begin{center}
-        \includegraphics[width=10cm, trim=0cm 1.3cm 0cm 1cm, clip]{figures/red_data.pdf}
-        \caption{Reduce data: 1D sinusoinal curve without rotation\label{fig:fig_red_data}}    
+        \includegraphics[width=10cm, trim=0cm 0cm 0cm 0cm, clip]{figures/red_data.pdf}
+        \caption{Reduced data: 1D sinusoidal curve after removing the background from raw data shown in figure \ref{fig:fig_raw_data}. The reduced data, raw data and plot scripts can be found by clicking on the icons on the left. \label{fig:fig_red_data}}    
         \end{center}
     }
     \end{figure}
     }
-    \anode{48}{5}{24cm}{
+    \anode{54}{5.5}{20cm}{
     \begin{figure}
     {
         \script{ana_data_plot.py}
         \begin{center}
-        \includegraphics[width=10cm, trim=0cm 1.3cm 0cm 1cm, clip]{figures/ana_data.pdf}
-        \caption{data analysis: angular freq and phase shift (expected vs fitted)\label{fig:fig_ana_data}}    
+        \includegraphics[width=10cm, trim=0cm 0cm 0cm 0cm, clip]{figures/ana_data.pdf}
+        \caption{Analyzed data: Angular freq and phase shift extracted from reduced data are compared with expected trend. The analyzed data, reduced data, raw data and plot scripts can be found by clicking on the icons on the left.\label{fig:fig_ana_data}}    
         \end{center}
     }
     \end{figure}
