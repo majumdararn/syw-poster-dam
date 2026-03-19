@@ -106,7 +106,7 @@ try:
     plt.tight_layout()
     plt.xticks(fontsize=20)
     plt.yticks(fontsize=20)
-    plt.legend(fontsize=20)
+    plt.legend(fontsize=20, ncols=2)
     plt.ylim(top=9)
     plt.savefig(paths.figures / 'ana_data.pdf')
     # # save reduced data
