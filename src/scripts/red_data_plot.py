@@ -74,7 +74,7 @@ while True:
         break
 plt.xlabel('x', fontsize=20)
 plt.ylabel('y', fontsize=20)
-plt.legend(fontsize=20, ncols=2, loc='center left', bbox_to_anchor=(1, 0.5))
+plt.legend(fontsize=20, ncols=1, loc='center left', bbox_to_anchor=(1, 0.5))
 plt.tight_layout()
 plt.savefig(paths.figures / 'red_data.pdf')
 print('The end')
