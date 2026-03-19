@@ -27,7 +27,7 @@ while True:
         y_noise=data[:,3]
         # x_red, y_red=data_angle_cor(x_noise, y_noise, alpha_val)
         label_name=f'Measurement {exp_idx}'
-        plt.plot(x_noise,y_noise,'o')
+        plt.plot(x_noise,y_noise,'o', label=label_name)
         exp_idx += 1
     except KeyError:
         break
