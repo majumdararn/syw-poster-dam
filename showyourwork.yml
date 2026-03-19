@@ -25,7 +25,7 @@ dag:
 
 # Externally-hosted datasets, e.g. on Zenodo
 datasets:
-  10.5072/zenodo.471581:
+  10.5281/zenodo.19115565:
     contents:
       data.tar.gz: src/data/data.tar.gz
 
