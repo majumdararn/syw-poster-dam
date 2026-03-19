@@ -71,7 +71,6 @@ overleaf:
   pull:
     - src/tex/ms.tex
     - src/tex/bib.bib
-    - src/tex/MLZposter.sty
 
 # Always require all input files to be present on disk for workflow to pass?
 require_inputs: true
