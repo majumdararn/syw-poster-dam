@@ -33,6 +33,8 @@ while True:
         break
 plt.xlabel('Pixel positions [A.U.]', fontsize=15)
 plt.ylabel('Measurement amplitude [A.U.]', fontsize=15)
+plt.xticks(fontsize=15)
+plt.yticks(fontsize=15)
 plt.legend(fontsize=15, ncols=1, loc='center left', bbox_to_anchor=(1, 0.5))
 plt.tight_layout()
 plt.savefig(paths.figures / 'raw_data.pdf')
