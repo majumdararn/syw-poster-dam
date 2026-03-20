@@ -2,13 +2,22 @@
 \setcounter{secnumdepth}{0}
 
 \RequirePackage[absolute,showboxes]{textpos} %  position textblocks at arbitary places
-\RequirePackage{helvet}
+% \RequirePackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-\RequirePackage[utf8]{inputenc}
+% \RequirePackage[utf8]{inputenc}
 \RequirePackage[normalem]{ulem}
-\RequirePackage{times}
+% \RequirePackage{times}
 \RequirePackage{tcolorbox}
 \RequirePackage{tikz}
+\RequirePackage{iftex}
+
+\ifPDFTeX
+  \RequirePackage{tgheros}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \RequirePackage{fontspec}
+  \setmainfont{TeX Gyre Heros}
+\fi
 
 % These colours are tried and tested for titles and headers. Don't other use color!
 \definecolor{mlzblue}{RGB}{27,38,75}
@@ -59,3 +68,7 @@
 \def\SECTION#1{\begin{tcolorbox}[colframe=mlzframe,colback=mlzblue,boxrule=6pt,arc=3mm,width=1.5\textwidth]\bfseries\Large\color{white}#1\end{tcolorbox}}
 
 \def\SUBSECTION#1{{\LARGE\color{DarkBlue}#1}\vspace{0.5cm}}
+
+\AtBeginDocument{
+  \sffamily
+}
