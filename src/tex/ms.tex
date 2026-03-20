@@ -146,37 +146,44 @@
 \SECTION{Demonstration of reproducible workflow using showyourwork}
 \begin{tikzpicture}
     \anode{0}{0}{74cm}{
-        This poster is created using the \emph{showyourwork!} software and is available under Creative Commons Attribution 4.0 International license. The repository is available at \href{https://github.com/majumdararn/syw-poster-dam}{https://github.com/majumdararn/syw-poster-dam} \cite{majumdar2026github_syw_poster} under MIT license. Each figure caption in the electronic copy hosted in GitHub contains two links: One to the dataset stored on Zenodo used in the corresponding figure and the other to the script used to make the figure. This work also demonstrates a dummy workflow of raw data processing and analysis through figures \ref{fig:fig_raw_data}, \ref{fig:fig_red_data}, and \ref{fig:fig_ana_data}. The raw data is available at \href{https://doi.org/10.5072/zenodo.471581}{https://doi.org/10.5072/zenodo.471581}~\cite{majumdar2026syw_static_data}, the processed (or reduced) and analyzed data are available at \href{https://doi.org/10.5072/zenodo.470887}{https://doi.org/10.5072/zenodo.470887}~\cite{showyourwork2026syw_dyn_data}.
+    \SUBSECTION{Showyourwork framework for this poster}
+    
+        This poster is created using the \emph{showyourwork!} software, and an electronic copy is available under the Creative Commons Attribution 4.0 International license. The electronic copy can be downloaded from a GitHub repository~\cite{majumdar2026github_syw_poster}, publicly available under the MIT license. Each figure caption in the electronic copy contains a maximum of three icons: The top two icons link to the dynamic and static Zenodo datasets used in the corresponding figure, and the bottom icon links to the script used to make the figure. \\
+        
+    \SUBSECTION{Application to a use case}
+
+        A dummy use case is proposed in this work to demonstrate the essential features of the showyourwork and its relevance in scientific publications related to photon and neutron experiments. In the proposed use case, raw \emph{measurement amplitude data} is collected using a 1D detector. The raw data, shown in figure \ref{fig:fig_raw_data}, includes a background with linearly dependent on pixel coordinate. This background is removed to produce reduced data, as shown in figure \ref{fig:fig_red_data}. The reduced data is then fitted to $sin(kx+t)$ w.r.t. $k$ and $t$ shown in figure \ref{fig:fig_ana_data}, where $k$ is angular frequency, $t$ is phase shift, and $x$ is pixel positions.
+        % This links are shown as icons This work also demonstrates a dummy workflow of raw data processing and analysis through figures \ref{fig:fig_raw_data}, \ref{fig:fig_red_data}, and \ref{fig:fig_ana_data}. The raw data is available at \href{https://doi.org/10.5072/zenodo.471581}{https://doi.org/10.5072/zenodo.471581}~\cite{majumdar2026syw_static_data}, the processed (or reduced) and analyzed data are available at \href{https://doi.org/10.5072/zenodo.470887}{https://doi.org/10.5072/zenodo.470887}~\cite{showyourwork2026syw_dyn_data}
     }
-	\anode{0}{5.5}{20cm}{
+	\anode{0}{11.0}{20cm}{
     \begin{figure}
     {
         \script{raw_data_plot.py}
         \begin{center}
         \includegraphics[trim=0cm 0cm 0cm 0cm, clip]{figures/raw_data.pdf}
-        \caption{Raw data: 1D sinusoidal amplitude with a background, creating angular distortion in each measurement. The value of angular distortion is recorded in the raw data as alpha. The raw data and plot scripts can be found by clicking on the icons on the left.\label{fig:fig_raw_data}}    
+        \caption{Raw data: Shown are amplitude vs pixel positions data with background for 10 different measurements. This plot is created by a GitHub-hosted plot script~\cite{majumdar2026github_syw_poster}, which accesses the raw data from Zenodo~\cite{majumdar2026syw_static_data}. The raw dataset and corresponding plot script can be directly accessed by clicking the dataset and GitHub icon on the left.\label{fig:fig_raw_data}}    
         \end{center}
     }
     \end{figure}
 	}
-    \anode{27}{5.5}{20cm}{
+    \anode{22.0}{11.0}{26cm}{
     \begin{figure}
     {
         \script{red_data_plot.py}
         \begin{center}
         \includegraphics[trim=0cm 0cm 0cm 0cm, clip]{figures/red_data.pdf}
-        \caption{Reduced data: 1D sinusoidal curve after removing the background from raw data shown in figure \ref{fig:fig_raw_data}. The reduced data, raw data and plot scripts can be found by clicking on the icons on the left. \label{fig:fig_red_data}}    
+        \caption{Reduced data: Shown are amplitude vs pixel positions data for all measurements after background removal from raw data. Within showyourwork, the raw data~\cite{majumdar2026syw_static_data} is accessed and reduced by a script that stores the reduced dataset in Zenodo~\cite{showyourwork2026syw_dyn_data}. A plot script~\cite{majumdar2026github_syw_poster} accesses the reduced data and plots this figure. The reduced dataset (top icon), raw dataset (middle icon), and related plot script (bottom icon) can be accessed by clicking the icons shown on the left. \label{fig:fig_red_data}}    
         \end{center}
     }
     \end{figure}
     }
-    \anode{54}{5.5}{20cm}{
+    \anode{50}{11.0}{24cm}{
     \begin{figure}
     {
         \script{ana_data_plot.py}
         \begin{center}
-        \includegraphics[trim=0cm 0cm 0cm 0cm, clip]{figures/ana_data.pdf}
-        \caption{Analyzed data: Angular freq and phase shift extracted from reduced data are compared with expected trend. The analyzed data, reduced data, raw data and plot scripts can be found by clicking on the icons on the left.\label{fig:fig_ana_data}}    
+        \includegraphics[trim=0cm 0.1cm 0cm 0cm, clip]{figures/ana_data.pdf}
+        \caption{Analyzed data: Fitted values angular frequencies $(k)$ and phase shifts $(t)$ extracted from reduced data of different measurements are compared with the expected trend. Within showyourwork, the reduced data~\cite{showyourwork2026syw_dyn_data} is accessed and analyzed by a script that stores the reduced dataset in Zenodo~\cite{showyourwork2026syw_dyn_data}. The analyzed data (top icon), reduced dataset (top icon), raw dataset (middle icon), and related plot script (bottom icon) can be accessed by clicking the icons shown on the left.\label{fig:fig_ana_data}}    
         \end{center}
     }
     \end{figure}
@@ -185,10 +192,10 @@
 \end{textblock}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{textblock}{86}(7.5,75)
+\begin{textblock}{86}(7.5,80.5)
 \SECTION{Declaration}
 \begin{tikzpicture}
-	\anode{0}{1}{68cm}{
+	\anode{0}{1}{74cm}{
         This work was supported by the consortium DAPHNE4NFDI in the context of the work of the NFDI e.V. The consortium is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) - project number 460248799.
 	}
  %    \anode{69}{0}{5cm}{
@@ -199,7 +206,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{textblock}{86}(7.5,84.5)
+\begin{textblock}{86}(7.5,85)
 \SECTION{References}
 \begin{tikzpicture}
 	\anode{0}{0}{74cm}{
@@ -220,9 +227,9 @@
 \begin{textblock}{86}(7.5,93.9)
 \begin{tikzpicture}
   \anode{0}{0}{5cm}{\textbf{Contact:}}
-  \anode{4}{0.0}{20cm}{Name Arnab Majumdar\\ E-mail: arnab.majumdar@hereon.de\\ phone: +49.89.158860.771}
-  \anode{25}{0.0}{20cm}{Name Sebastian Busch\\ E-mail: sebastian.busch@hereon.de\\ phone: +49.89.158860.764}
-  \anode{69}{0}{5cm}{\includegraphics[width=3.5cm]{figures/DAPHNE4NFDI_logo.png}}
+  \anode{4}{0.0}{20cm}{Name Arnab Majumdar\\ E-mail: arnab.majumdar@hereon.de\\ Phone: +49.89.158860.771\\ Orcid id: 0000-0003-4049-4060}
+  \anode{25}{0.0}{20cm}{Name Sebastian Busch\\ E-mail: sebastian.busch@hereon.de\\ Phone: +49.89.158860.764\\ Orcid id: 0000-0002-9815-909X}
+  \anode{58}{0}{5cm}{\includegraphics[width=6.0cm]{figures/DAPHNE4NFDI_logo.png}}
   \anode{66}{0}{5cm}{\includegraphics[height=3.5cm]{figures/gems.png}}
 \end{tikzpicture}
 \end{textblock}
