@@ -4,7 +4,6 @@ raw doi: 10.5281/zenodo.19115565
 cache doi: 10.5281/zenodo.19115970
 """
 
-import os
 import tarfile
 import numpy as np
 import matplotlib.pyplot as plt
