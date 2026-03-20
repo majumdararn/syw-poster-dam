@@ -1,5 +1,9 @@
 """
-Python files to read dummy dataset created by data_create.py
+Data generation script for reducing raw data
+snakemake rule: reduced_data
+raw doi: 10.5281/zenodo.19115565
+cache doi: 10.5281/zenodo.19115970
+
 """
 
 import os
@@ -13,7 +17,7 @@ def angle_cor(x_raw, y_raw, angle):
     correct rotation of data
     x_raw = raw x data
     y_raw = raw y data
-    angle = anglre to be corrected
+    angle = angle to be corrected
     """
     # angle for undoing rotation
     angle_opp=-angle
