@@ -19,12 +19,12 @@
 % \bibliography{bib}
 \usepackage[numbers, sort&compress]{natbib} 
 
-% % conditionally load the hyperref package only if it has not been loaded before
-% \makeatletter
-% \@ifpackageloaded{hyperref}
-%   {\relax}
-%   {\usepackage{hyperref}}
-% \makeatother
+% conditionally load the hyperref package only if it has not been loaded before
+\makeatletter
+\@ifpackageloaded{hyperref}
+  {\relax}
+  {\usepackage{hyperref}}
+\makeatother
 
 % \renewcommand{\familydefault}{\sfdefault}
 % \sffamily
@@ -33,6 +33,41 @@
 %   \renewcommand{\familydefault}{\sfdefault}
 %   \sffamily
 % }
+
+
+% Detect engine: Tectonic (XeTeX) vs pdfLaTeX
+\makeatletter
+\newif\iftectonic
+\newif\ifpdftex
+
+% Tectonic identifies as XeTeX
+\ifdefined\XeTeXversion
+  \tectonictrue
+\else
+  \tectonicfalse
+\fi
+
+% pdfLaTeX check
+\ifdefined\pdfoutput
+  \pdftextrue
+\else
+  \pdftexfalse
+\fi
+\makeatother
+
+\iftectonic
+  % Tectonic: use fontspec + TeX Gyre Heros (Helvetica-like)
+  \usepackage{fontspec}
+  \setmainfont{texgyreheros-regular.otf}
+\fi
+
+\ifpdftex
+  % pdfLaTeX: use helvet package
+  \usepackage[scaled]{helvet}
+  \renewcommand{\familydefault}{\sfdefault}
+  \usepackage[T1]{fontenc}
+\fi
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
