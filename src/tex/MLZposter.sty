@@ -12,9 +12,9 @@
 % \RequirePackage{iftex}
 \RequirePackage{tgheros}
 % \renewcommand{\familydefault}{\sfdefault}
-\renewcommand{\rmdefault}{qhv}
-\renewcommand{\sfdefault}{qhv}
-\renewcommand{\familydefault}{\sfdefault}
+% \renewcommand{\rmdefault}{qhv}
+% \renewcommand{\sfdefault}{qhv}
+% \renewcommand{\familydefault}{\sfdefault}
 
 % \if PDFTeX
 %   \RequirePackage{tgheros}
@@ -75,5 +75,8 @@
 \def\SUBSECTION#1{{\LARGE\color{DarkBlue}#1}\vspace{0.5cm}}
 
 \AtBeginDocument{
-  \sffamily
+  \renewcommand{\rmdefault}{qhv}
+  \renewcommand{\sfdefault}{qhv}
+  \renewcommand{\familydefault}{\sfdefault}
+  \fontfamily{qhv}\selectfont
 }
