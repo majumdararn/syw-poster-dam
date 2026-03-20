@@ -1,5 +1,7 @@
 """
-Python files to read dummy dataset created by data_create.py
+Plot script for plotting reduced raw data
+raw doi: 10.5281/zenodo.19115565
+cache doi: 10.5281/zenodo.19115970
 """
 
 import os
@@ -8,70 +10,30 @@ import numpy as np
 import matplotlib.pyplot as plt
 import paths
 
-# # functions
-# def data_angle_cor(x_raw, y_raw, angle):
-#     """
-#     correct rotation of data
-#     x_raw = raw x data
-#     y_raw = raw y data
-#     angle = anglre to be corrected
-#     """
-#     # angle for undo rotation
-#     angle_opp=-angle
-
-#     # coefficients for undo rotation
-#     cos_a = np.cos(angle_opp)
-#     sin_a = np.sin(angle_opp)
-
-#     # undo rotation
-#     x_angle_cor = x_raw * cos_a - y_raw * sin_a
-#     y_angle_cor = x_raw * sin_a + y_raw * cos_a
-
-#     return x_angle_cor, y_angle_cor
-
-# # create dir for savinf reduced data
-# final_dir='data_red'
-# os.makedirs(final_dir, exist_ok=True)
-
-# open tarfile
+# open reduced data as tarfile
 tar_path=paths.data / 'red_data.tar.gz'
 tar=tarfile.open(tar_path, 'r:gz')
 
-
-# read trail
-exp_idx=0
-
-# for name in tar.getnames():
-#     print(name)
-
+# initialize figure
 plt.figure(figsize=(8, 4))
 
+# read data
+exp_idx=0
 while True:
     try:
+        # reduced data file read for each measurement
         txt_file_name = f'red_data/red_exp_{exp_idx}/red_data.txt'
-        print("I am here")
         txt_file_path = tar.extractfile(txt_file_name)
-        print("I am here")
-        # txt_file_name=f'data/exp_{exp_idx}/data.txt'
         data = np.loadtxt(txt_file_path, comments='#', dtype=float)
-        print("I am here")
-        # txt_file_path = tar.extractfile(txt_file_name)
-        # with txt_file_path as f:
-        #     # Read the first two lines
-        #     _ = f.readline()  # first line (skip)
-        #     second_line = f.readline().decode().strip()  # second line
-        #     alpha_val_str=second_line[9:]
-        #     alpha_val=float(alpha_val_str)
-        #     print(f'Rotation angle is: {alpha_val}')
-        label_name=f'Measurement {exp_idx}'
         x_red=data[:,0]
-        print(x_red)
         y_red=data[:,1]
-        # x_red, y_red=data_angle_cor(x_noise, y_noise, alpha_val)
+        # plot
+        label_name=f'Measurement {exp_idx}'
         plt.plot(x_red,y_red,'o', label=label_name)
         exp_idx += 1
     except KeyError:
         break
+# plot formatting and saving
 plt.xlabel('Pixel positions [A.U.]', fontsize=15)
 plt.ylabel('Measurement amplitude [A.U.]', fontsize=15)
 plt.xticks(fontsize=20)
@@ -79,54 +41,3 @@ plt.yticks(fontsize=20)
 plt.legend(fontsize=15, ncols=1, loc='center left', bbox_to_anchor=(1, 0.5))
 plt.tight_layout()
 plt.savefig(paths.figures / 'red_data.pdf')
-print('The end')
-
-# # cwd
-# print('Getting current working dir (cwd):')
-# cwd=os.getcwd()
-# print('cwd: ', cwd)
-
-# # create dir for savinf reduced data
-# final_dir='data_red'
-# os.makedirs(final_dir, exist_ok=True)
-
-# # open tarfile
-# tar=tarfile.open('data.tar.gz', 'r:gz')
-# data=tar.extractfile('data')
-
-# # read trail
-# exp_idx=0
-# while os.path.exists(f'data/exp_{exp_idx}') and exp_idx<5:
-#     print(f'exists exp data/exp_{exp_idx}')
-#     print(f'reading data.txt from data/exp_{exp_idx}')
-#     txt_file_path=f'data/exp_{exp_idx}/data.txt'
-#     with open(txt_file_path, "r") as f:
-#         # Read the first two lines
-#         _ = f.readline()  # first line (skip)
-#         second_line = f.readline()  # second line
-#         alpha_val_str=second_line[9:]
-#         alpha_val=float(alpha_val_str)
-#         print(f'Rotation angle is: {alpha_val}')
-#     data=np.loadtxt(txt_file_path, comments='#', dtype='float')
-#     x=data[:,0]
-#     y=data[:,1]
-#     x_noise=data[:,2]
-#     y_noise=data[:,3]
-#     x_red, y_red=data_angle_cor(x_noise, y_noise, alpha_val)
-#     plt.plot(x_red,y_red,'o')
-#     plt.show()
-#     final_data_dir=f'exp_{exp_idx}_red'
-#     final_data_dir=os.path.join(final_dir, final_data_dir)
-#     os.makedirs(final_data_dir, exist_ok=True)
-#     final_txt_file='data_red.txt'
-#     final_txt_file_loc=os.path.join(final_data_dir, final_txt_file)
-#     data_red = np.column_stack((x_red, y_red))
-#     np.savetxt(final_txt_file_loc,
-#                 data_red, header='x_red x_red', fmt="%.6f")
-#     exp_idx+=1
-# print('The end')
-# # make a tar file
-# # Create a compressed tar.gz archive
-# with tarfile.open('data_red.tar.gz', 'w:gz') as tar:
-#     tar.add('data_red', arcname=os.path.basename('data_red'))
-# print('Info>> Saved reduced data as tar file')
