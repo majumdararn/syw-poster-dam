@@ -9,17 +9,17 @@
 % \RequirePackage{times}
 \RequirePackage{tcolorbox}
 \RequirePackage{tikz}
-\RequirePackage{iftex}
+% \RequirePackage{iftex}
 \RequirePackage{tgheros}
 \renewcommand{\familydefault}{\sfdefault}
 
-\if PDFTeX
-  \RequirePackage{tgheros}
-  \renewcommand{\familydefault}{\sfdefault}
-\else
-  \RequirePackage{fontspec}
-  \setmainfont{TeX Gyre Heros}
-\fi
+% \if PDFTeX
+%   \RequirePackage{tgheros}
+%   \renewcommand{\familydefault}{\sfdefault}
+% \else
+%   \RequirePackage{fontspec}
+%   \setmainfont{TeX Gyre Heros}
+% \fi
 
 % These colours are tried and tested for titles and headers. Don't other use color!
 \definecolor{mlzblue}{RGB}{27,38,75}
