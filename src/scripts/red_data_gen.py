@@ -46,6 +46,8 @@ while True:
         raw_data = np.loadtxt(txt_file_tar, comments='#', dtype=float)
         raw_x=raw_data[:,2]
         raw_y=raw_data[:,3]
+        # backgroung in raw data creates a angular distortion
+        # the angle of angular distortion is saved as alpha
         # get alpha value from raw data file
         txt_file_tar = tar.extractfile(txt_file_name)
         with txt_file_tar as f:
@@ -54,7 +56,7 @@ while True:
             second_line = f.readline()  # second line
             alpha_val_str=second_line[9:]
             alpha_val=float(alpha_val_str)
-        # reduce data
+        # reduce data (= undo the rotation)
         red_x, red_y=angle_cor(raw_x, raw_y, alpha_val)
         # save reduced data
         # reduced data dir for exp
