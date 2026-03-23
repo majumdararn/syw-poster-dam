@@ -2,21 +2,8 @@
 \usepackage{MLZposter}
 \usepackage{caption}
 \usepackage{showyourwork}
-% \usepackage[utf8]{inputenc}
 \usepackage{tgheros}
 \renewcommand{\familydefault}{\sfdefault}
-% \usepackage{html}
-% \stylesheet{style.css}
-% \usepackage[colorlinks=true, citecolor=blue, linkcolor=blue, urlcolor=blue]{hyperref}
-% \hypersetup{
-%     colorlinks=true,
-%     urlcolor=blue,
-%     citecolor=blue,
-%     linkcolor=blue
-% }
-% \usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
-% \bibliographystyle{unsrt}
-% \bibliography{bib}
 \usepackage[numbers, sort&compress]{natbib} 
 
 % conditionally load the hyperref package only if it has not been loaded before
@@ -25,15 +12,6 @@
   {\relax}
   {\usepackage{hyperref}}
 \makeatother
-
-% \renewcommand{\familydefault}{\sfdefault}
-% \sffamily
-
-% \AtBeginDocument{
-%   \renewcommand{\familydefault}{\sfdefault}
-%   \sffamily
-% }
-
 
 % Detect engine: Tectonic (XeTeX) vs pdfLaTeX
 \makeatletter
@@ -153,7 +131,6 @@
     \SUBSECTION{Application to a use case}
 
         A dummy use case is proposed in this work to demonstrate the essential features of the showyourwork and its relevance in scientific publications related to photon and neutron experiments. In the proposed use case, raw \emph{measurement amplitude data} is collected using a 1D detector. The raw data, shown in figure \ref{fig:fig_raw_data}, includes a background with linearly dependent on pixel coordinate. This background is removed to produce reduced data, as shown in figure \ref{fig:fig_red_data}. The reduced data is then fitted to $sin(kx+t)$ w.r.t. $k$ and $t$ shown in figure \ref{fig:fig_ana_data}, where $k$ is angular frequency, $t$ is phase shift, and $x$ is pixel positions.
-        % This links are shown as icons This work also demonstrates a dummy workflow of raw data processing and analysis through figures \ref{fig:fig_raw_data}, \ref{fig:fig_red_data}, and \ref{fig:fig_ana_data}. The raw data is available at \href{https://doi.org/10.5072/zenodo.471581}{https://doi.org/10.5072/zenodo.471581}~\cite{majumdar2026syw_static_data}, the processed (or reduced) and analyzed data are available at \href{https://doi.org/10.5072/zenodo.470887}{https://doi.org/10.5072/zenodo.470887}~\cite{showyourwork2026syw_dyn_data}
     }
 	\anode{0}{11.0}{20cm}{
     \begin{figure}
@@ -198,9 +175,6 @@
 	\anode{0}{1}{74cm}{
         This work was supported by the consortium DAPHNE4NFDI in the context of the work of the NFDI e.V. The consortium is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) - project number 460248799.
 	}
- %    \anode{69}{0}{5cm}{
- %        \includegraphics[width=5cm]{figures/DAPHNE4NFDI_logo.png}
-	% }
 \end{tikzpicture}
 \end{textblock}
 
@@ -210,8 +184,8 @@
 \SECTION{References}
 \begin{tikzpicture}
 	\anode{0}{0}{74cm}{
-    \renewcommand{\refname}{}   % remove heading
-    \vspace{-1.5em}                    % remove extra vertical space (adjust as needed)
+    \renewcommand{\refname}{} % remove heading
+    \vspace{-1.5em}           % remove extra vertical space (adjust as needed)
     \bibliographystyle{unsrtnat}
     \bibliography{bib}
 	}
