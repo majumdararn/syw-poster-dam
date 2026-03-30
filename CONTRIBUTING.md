@@ -72,7 +72,7 @@ To access Overleaf (if applicable):
 ### Edit and produce a modified poster remotely as a collaborator
 
 - To edit the poster, make changes locally and commit them using `git add` and `git commit -m "your commit message"`.
-- To build the edited poster locally, run `showyourwork build`. If Overleaf is integrated, this may automatically create a commit named `overleaf sync`. Sometimes, `showyourwork build` is required before building.
+- To build the edited poster locally, run `showyourwork build`. If Overleaf is integrated, this may automatically create a commit named `overleaf sync`. Sometimes, `showyourwork clean` is required before building.
 - To produce the edited poster remotely, push your changes using `git push`. This will trigger a CI/CD workflow and generate the updated article remotely.
 
 ## Independent investigators
