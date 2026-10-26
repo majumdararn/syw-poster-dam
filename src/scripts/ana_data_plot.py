@@ -56,10 +56,10 @@ try:
     fit_t=ana_data[:,3]
     # plotting
     plt.figure(figsize=(8, 4))
-    plt.plot(org_k, '--k', label='trend of k')
-    plt.plot(fit_k,'o', label='fitted k')
-    plt.plot(org_t, '--k', label='trend of t')
-    plt.plot(fit_t,'*', label='fitted t')
+    plt.plot(org_k[0:-2], '--k', label='trend of k')
+    plt.plot(fit_k[0:-2],'o', label='fitted k')
+    plt.plot(org_t[0:-2], '--k', label='trend of t')
+    plt.plot(fit_t[0:-2],'*', label='fitted t')
     plt.xlabel('Measurement index [-]', fontsize=20)
     plt.ylabel('Data [A.U.]', fontsize=20)
     plt.tight_layout()
